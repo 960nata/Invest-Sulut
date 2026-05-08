@@ -1,0 +1,127 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ProjectCategory {
+  KEK
+  READY_TO_OFFER
+  POTENTIAL
+}
+
+enum ProjectStatus {
+  DRAFT
+  PUBLISHED
+  COMPLETED
+}
+
+model Project {
+  id                String          @id @default(cuid())
+  slug              String          @unique
+  title             String
+  shortDescription  String
+  description       String          @db.Text
+  category          ProjectCategory @default(POTENTIAL)
+  sector            String
+  locationName      String
+  latitude          Float?
+  longitude         Float?
+  
+  // Financials
+  investmentValue   Float           // in IDR/USD context
+  currency          String          @default("IDR")
+  roi               Float?
+  irr               Float?
+  npv               Float?
+  
+  // Assets
+  featuredImage     String?
+  gallery           String[]        // Array of URLs
+  documents         Json?           // { "prospectus": "url", "presentation": "url" }
+  
+  status            ProjectStatus   @default(DRAFT)
+  isFeatured        Boolean         @default(false)
+  
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  
+  // Relations
+  investments       Investment[]
+  inquiries         Inquiry[]
+}
+
+model Investment {
+  id        String   @id @default(cuid())
+  amount    Float
+  investor  String
+  date      DateTime @default(now())
+  projectId String
+  project   Project  @relation(fields: [projectId], references: [id])
+}
+
+model Infrastructure {
+  id          String   @id @default(cuid())
+  name        String
+  type        String   // e.g., "Port", "Airport", "Power Plant"
+  category    String   // e.g., "Connectivity", "Utilities", "Logistics"
+  description String   @db.Text
+  location    String
+  latitude    Float?
+  longitude   Float?
+  status      String   // e.g., "Operational", "Under Construction"
+  capacity    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model News {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  content       String   @db.Text
+  excerpt       String
+  featuredImage String?
+  category      String
+  author        String
+  isPublished   Boolean  @default(false)
+  publishedAt   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model EconomicData {
+  id        String   @id @default(cuid())
+  indicator String   // e.g., "GRDP Growth", "FDI", "DDI"
+  value     Float
+  unit      String   // e.g., "%", "Trillion IDR"
+  year      Int
+  quarter   Int?     // 1, 2, 3, 4
+  region    String   @default("North Sulawesi")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Inquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  company   String?
+  subject   String
+  message   String   @db.Text
+  status    String   @default("NEW") // NEW, IN_PROGRESS, RESOLVED
+  projectId String?
+  project   Project? @relation(fields: [projectId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String @db.Text
+}

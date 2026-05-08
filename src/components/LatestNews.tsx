@@ -1,0 +1,150 @@
+'use client';
+
+import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const newsItems = [
+  {
+    id: 1,
+    title: "Realisasi Investasi Sulut Q1 2025 Capai Rp3,08 Triliun",
+    date: "15 April 2025",
+    category: "PRESS RELEASE",
+    isFeatured: true,
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 2,
+    title: "KEK Likupang Masuk 5 Destinasi Super Prioritas Nasional",
+    date: "10 April 2025",
+    category: "NEWS",
+    isFeatured: false,
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+  },
+  {
+    id: 3,
+    title: "Ekspor Sulawesi Utara Tumbuh 6.3% di Kuartal Pertama 2025",
+    date: "5 April 2025",
+    category: "NEWS",
+    isFeatured: false,
+    image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?q=80&w=2071&auto=format&fit=crop"
+  },
+  {
+    id: 4,
+    title: "Pemerintah Provinsi Percepat Pembangunan Infrastruktur Pariwisata",
+    date: "2 April 2025",
+    category: "UPDATE",
+    isFeatured: false,
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop"
+  }
+];
+
+export default function LatestNews() {
+  const featuredNews = newsItems.find(item => item.isFeatured);
+  const otherNews = newsItems.filter(item => !item.isFeatured);
+
+  return (
+    <section className="relative py-32 bg-white overflow-hidden font-sans border-t border-slate-100">
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
+        
+        {/* Standardized Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-16">
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-[42px] font-bold text-slate-900 tracking-tight leading-[1.1] mb-6">
+              Berita & <span className="text-[#00529C]">Informasi</span> <br className="hidden md:block" />
+              Terbaru SULUT
+            </h2>
+            <p className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-2xl">
+              Pantau perkembangan investasi, kebijakan ekonomi, dan peluang strategis terkini di Sulawesi Utara.
+            </p>
+          </div>
+          
+          <Link 
+            href="/news" 
+            className="bg-[#00529C] text-white px-8 py-4 rounded-full text-[15px] font-bold flex items-center gap-3 hover:bg-white hover:text-[#00529C] border border-transparent hover:border-[#00529C] transition-all duration-300 shadow-xl shadow-blue-900/20 group"
+          >
+            <span>Lihat Semua Berita</span> <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          {/* Left Column - Featured News Card */}
+          <div className="lg:col-span-7">
+            {featuredNews && (
+              <Link 
+                href={`/news/${featuredNews.id}`} 
+                className="group block relative h-[360px] md:h-[464px] rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:border-[#00529C] hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-500"
+              >
+                <Image 
+                  src={featuredNews.image} 
+                  alt={featuredNews.title} 
+                  fill 
+                  className="object-cover transition-transform duration-[1000ms] group-hover:scale-105"
+                />
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#001A33]/90 via-black/20 to-transparent"></div>
+                
+                {/* Content Overlay */}
+                <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
+                  <div className="flex items-center gap-4 mb-5">
+                    <span className="bg-[#00529C] text-white text-[10px] font-bold px-3 py-1.5 rounded-sm uppercase tracking-wider">
+                      {featuredNews.category}
+                    </span>
+                    <span className="text-white/70 text-xs font-medium tracking-wide">
+                      {featuredNews.date}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight group-hover:text-blue-300 transition-colors tracking-tight">
+                    {featuredNews.title}
+                  </h3>
+                </div>
+              </Link>
+            )}
+          </div>
+
+          {/* Right Column - News List items with refined style */}
+          <div className="lg:col-span-5 flex flex-col gap-4">
+            {otherNews.map((news, idx) => (
+              <Link 
+                key={news.id} 
+                href={`/news/${news.id}`} 
+                className={cn(
+                  "flex gap-6 group transition-all p-4 rounded-xl border border-transparent hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-sm",
+                  idx !== otherNews.length - 1 ? "border-b-slate-100" : ""
+                )}
+              >
+                <div className="relative w-28 h-20 md:w-40 md:h-28 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 shadow-sm">
+                  <Image 
+                    src={news.image} 
+                    alt={news.title} 
+                    fill 
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <div className="flex flex-col justify-center flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-[10px] font-bold text-[#00529C] bg-blue-50 px-2 py-0.5 rounded uppercase tracking-widest">
+                      {news.category}
+                    </span>
+                    <span className="text-slate-400 text-[11px] font-medium">
+                      {news.date}
+                    </span>
+                  </div>
+                  <h4 className="text-base md:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#00529C] transition-colors line-clamp-2 tracking-tight">
+                    {news.title}
+                  </h4>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
