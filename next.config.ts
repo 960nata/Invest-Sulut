@@ -49,7 +49,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  serverExternalPackages: ['@prisma/client'],
+  serverExternalPackages: ['@prisma/client', '.prisma/client'],
 };
 
 export default nextConfig;
