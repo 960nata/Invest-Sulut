@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const topProjects = [
   {
@@ -197,27 +198,52 @@ export default function WhySulut() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl md:text-[42px] font-bold text-slate-900 tracking-tight mb-8 leading-[1.1]">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-[42px] font-bold text-slate-900 tracking-tight mb-8 leading-[1.1]"
+          >
             Mengapa Sulawesi Utara?
-          </h2>
+          </motion.h2>
 
-          <p className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-5xl mb-12 mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-5xl mb-12 mx-auto"
+          >
             Terletak di jantung kawasan BIMP-EAGA dan Cincin Pasifik, Sulawesi Utara adalah pintu gerbang strategis menuju pasar Asia Timur dan Pasifik. Dengan tiga Kawasan Ekonomi Khusus aktif, pertumbuhan ekonomi di atas rata-rata nasional, dan kekayaan alam yang belum tersentuh — inilah provinsi yang menawarkan imbal hasil nyata bagi investor yang tepat.
-          </p>
+          </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default"
+            >
               <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#00529C] transition-colors">Gerbang Cincin Pasifik</h4>
               <p className="text-sm text-slate-500 leading-relaxed">Posisi strategis untuk jalur perdagangan internasional Asia-Pasifik.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default"
+            >
               <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#00529C] transition-colors">3 Kawasan Ekonomi Khusus</h4>
               <p className="text-sm text-slate-500 leading-relaxed">KEK Likupang, KEK Bitung, dan KPBPB Manado-Bitung yang aktif.</p>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default"
+            >
               <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#00529C] transition-colors">Pertumbuhan Konsisten</h4>
               <p className="text-sm text-slate-500 leading-relaxed">5,62% YoY, secara konsisten melampaui rata-rata nasional.</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

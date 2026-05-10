@@ -32,40 +32,40 @@ import Link from 'next/link';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-const heroSlides = [
+const defaultSlides = [
   {
     id: 1,
     tag: "Gateway to the Pacific",
-    title: "GATEWAY TO THE PACIFIC",
-    highlight: "RIM.",
-    desc: "We bridge global institutional capital with sustainable, high-yield opportunities in Eastern Indonesia's most strategic hub.",
+    title: "Creating a Sustainable Future with Investment Solutions.",
+    desc: "Discover the amazing ways strategic capital can transform your region or business.",
     btnText: "Explore Pipeline",
+    btnUrl: "/investment/projects",
     image: "/Images/Hero/Hero 1.avif",
     stats: { label: "Growth Rate", value: "+5.62%" }
   },
   {
     id: 2,
     tag: "Sustainability First",
-    title: "BLUE ECONOMY",
-    highlight: "FUTURE.",
+    title: "Blue Economy Future.",
     desc: "Leading the transition to a sustainable ocean-based economy. Unlock vast potential in marine resources and renewable energy.",
     btnText: "Invest in Blue",
+    btnUrl: "/investment/blue-economy",
     image: "/Images/Hero/Hero 2.png",
     stats: { label: "Potential", value: "IDR 12.5T" }
   },
   {
     id: 3,
     tag: "Industrial Excellence",
-    title: "STRATEGIC HUB",
-    highlight: "SULUT.",
+    title: "Strategic Hub Sulut.",
     desc: "Connecting international markets through Bitung Special Economic Zone. Infrastructure designed for global trade efficiency.",
     btnText: "Explore SEZ",
+    btnUrl: "/investment/sez",
     image: "/Images/Hero/Hero 3.avif",
     stats: { label: "Assets", value: "IDR 3.08T" }
   }
 ];
 
-export default function Hero() {
+export default function Hero({ slides = defaultSlides }: { slides?: typeof defaultSlides }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     duration: 30,
@@ -142,7 +142,7 @@ export default function Hero() {
       <div className="relative h-[600px] md:h-[850px] w-full overflow-hidden bg-slate-900 touch-pan-y cursor-grab active:cursor-grabbing" ref={emblaRef}>
         {/* Embla Container */}
           <div className="flex h-full w-full">
-            {heroSlides.map((slide) => (
+            {slides.map((slide) => (
               <div key={slide.id} className="flex-[0_0_100%] min-w-0 relative h-full overflow-hidden">
                 <div className="relative h-full w-full">
                   {/* Background Image */}
@@ -171,21 +171,20 @@ export default function Hero() {
                     className="parallax-text flex flex-col items-start text-left max-w-4xl"
                   >
                     <h1 className="text-4xl md:text-[56px] font-bold text-white mb-6 leading-[1.2] tracking-tight font-sans">
-                      Creating a Sustainable Future with <br />
-                      Investment Solutions.
+                      {slide.title}
                     </h1>
                     
                     <p className="text-base md:text-lg text-white/80 max-w-2xl mb-10 font-normal leading-relaxed">
-                      Discover the amazing ways strategic capital can transform your region or business.
+                      {slide.desc}
                     </p>
 
                     {/* Standardized BI Blue Button */}
                     <Link 
-                      href="/investment/projects" 
+                      href={slide.btnUrl} 
                       draggable={false}
                       className="bg-[#00529C] text-white px-8 py-4 rounded-full text-[15px] font-bold flex items-center gap-3 hover:bg-white hover:text-[#00529C] transition-all duration-300 shadow-xl shadow-blue-900/20 w-fit group"
                     >
-                      <span>Explore Pipeline</span>
+                      <span>{slide.btnText}</span>
                       <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </motion.div>
@@ -199,7 +198,7 @@ export default function Hero() {
 
       {/* Subtle Slide Indicators */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-         {heroSlides.map((_, idx) => (
+         {slides.map((_, idx) => (
            <button 
              key={idx}
              onClick={() => emblaApi?.scrollTo(idx)}
