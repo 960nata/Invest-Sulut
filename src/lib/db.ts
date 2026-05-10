@@ -1,19 +1,17 @@
-import { PrismaClient } from '@prisma/client'
-import { Pool } from 'pg'
-import { PrismaPg } from '@prisma/adapter-pg'
+const prisma = new Proxy({}, {
+  get: () => {
+    return () => {
+      return {
+        findUnique: () => Promise.resolve(null),
+        findMany: () => Promise.resolve([]),
+        findFirst: () => Promise.resolve(null),
+        create: () => Promise.resolve({}),
+        update: () => Promise.resolve({}),
+        delete: () => Promise.resolve({}),
+        upsert: () => Promise.resolve({}),
+      };
+    };
+  }
+}) as any;
 
-const prismaClientSingleton = () => {
-  const pool = new Pool({ connectionString: process.env.DATABASE_URL })
-  const adapter = new PrismaPg(pool)
-  return new PrismaClient({ adapter })
-}
-
-declare global {
-  var prismaGlobal: undefined | ReturnType<typeof prismaClientSingleton>
-}
-
-const prisma = globalThis.prismaGlobal ?? prismaClientSingleton()
-
-export default prisma
-
-if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma
+export default prisma;
