@@ -12,14 +12,14 @@ const topProjects = [
     id: 1,
     name: 'KEK Likupang — Waterfront Tourism City',
     sector: 'Pariwisata',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop',
+    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
     w: 'w-[320px] md:w-[450px]'
   },
   {
     id: 2,
     name: 'Bitung Industrial Port Zone',
     sector: 'Logistik',
-    image: 'https://images.unsplash.com/photo-1574246604907-db83750a19a4?q=80&w=2070&auto=format&fit=crop',
+    image: '/Images/Sulawesi/bitung_port_1778426013679.png',
     w: 'w-[240px] md:w-[300px]'
   },
   {
@@ -40,7 +40,7 @@ const topProjects = [
     id: 5,
     name: 'Likupang Eco-Resort Development',
     sector: 'Pariwisata',
-    image: 'https://images.unsplash.com/photo-1583037762141-c760b7e47192?q=80&w=2070&auto=format&fit=crop',
+    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
     w: 'w-[280px] md:w-[420px]'
   },
   {
@@ -78,7 +78,7 @@ const bottomProjects = [
     id: 9,
     name: 'Sangihe Deep Sea Port',
     sector: 'Maritim',
-    image: 'https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=2070&auto=format&fit=crop',
+    image: '/Images/Sulawesi/bunaken_reef_1778426086437.png',
     w: 'w-[280px] md:w-[380px]'
   },
   {
@@ -106,7 +106,7 @@ const bottomProjects = [
     id: 14,
     name: 'Minahasa Creative District',
     sector: 'Ekonomi Kreatif',
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2069&auto=format&fit=crop',
+    image: '/Images/Sulawesi/minahasa_house_1778426047038.png',
     w: 'w-[260px] md:w-[380px]'
   }
 ];

@@ -14,7 +14,7 @@ const sulutProjects = [
     location: 'Minahasa Utara, SULUT',
     year: '2025',
     tags: ['PARIWISATA', 'KWS. KHUSUS'],
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format&fit=crop',
+    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const sulutProjects = [
     location: 'Bitung, SULUT',
     year: '2024',
     tags: ['LOGISTIK', 'PELABUHAN'],
-    image: 'https://images.unsplash.com/photo-1494412519320-aa313c05051b?q=80&w=2070&auto=format&fit=crop',
+    image: '/Images/Sulawesi/bitung_port_1778426013679.png',
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const sulutProjects = [
     location: 'Likupang, SULUT',
     year: '2026',
     tags: ['PARIWISATA', 'RESORT'],
-    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=2070&auto=format&fit=crop',
+    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
   },
   {
     id: 6,
