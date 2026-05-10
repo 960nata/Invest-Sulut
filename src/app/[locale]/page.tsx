@@ -8,6 +8,8 @@ import InfinitePartnerStrip from '@/components/InfinitePartnerStrip';
 import ContactSection from '@/components/ContactSection';
 import prisma from '@/lib/db';
 
+export const dynamic = 'force-dynamic';
+
 export default async function HomePage() {
   const heroSetting = await prisma.setting.findUnique({
     where: { key: 'hero_slides' },
