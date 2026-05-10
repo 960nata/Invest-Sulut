@@ -6,20 +6,13 @@ import SpeechSection from '@/components/SpeechSection';
 import LatestNews from '@/components/LatestNews';
 import InfinitePartnerStrip from '@/components/InfinitePartnerStrip';
 import ContactSection from '@/components/ContactSection';
-import prisma from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
-  const heroSetting = await prisma.setting.findUnique({
-    where: { key: 'hero_slides' },
-  });
-
-  const slides = heroSetting ? JSON.parse(heroSetting.value) : undefined;
-
   return (
     <main className="min-h-screen">
-      <Hero slides={slides} />
+      <Hero />
       <EconomicSnapshot />
       <WhySulut />
       <ProjectSection />
