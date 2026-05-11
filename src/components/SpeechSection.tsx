@@ -50,12 +50,7 @@ export default function SpeechSection() {
       </div>
 
       <div className="relative z-20 max-w-5xl mx-auto w-full">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-white mb-4 leading-[1.1]">
-            Pidato Kepala Daerah
-          </h2>
 
-        </div>
 
         {/* Apple Style Glass Carousel */}
         <div className="relative">
