@@ -24,7 +24,7 @@ const newsItems = [
   },
   {
     id: 3,
-    title: "Ekspor Sulawesi Utara Tumbuh 6.3% di Kuartal Pertama 2025",
+    title: "Ekspor Sulawesi Utara Tumbuh 63% di Kuartal Pertama 2025",
     date: "5 April 2025",
     category: "NEWS",
     isFeatured: false,
@@ -53,8 +53,7 @@ export default function LatestNews() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-16">
           <div className="flex-1">
             <h2 className="text-3xl md:text-[42px] font-bold text-slate-900 tracking-tight leading-[1.1] mb-6">
-              Berita & <span className="text-[#00529C]">Informasi</span> <br className="hidden md:block" />
-              Terbaru SULUT
+              Berita & Informasi Terbaru
             </h2>
             <p className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-2xl">
               Pantau perkembangan investasi, kebijakan ekonomi, dan peluang strategis terkini di Sulawesi Utara.

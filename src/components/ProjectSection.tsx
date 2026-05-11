@@ -10,51 +10,43 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const sulutProjects = [
   {
     id: 1,
-    name: 'KEK Likupang — Waterfront Tourism City',
-    location: 'Minahasa Utara, SULUT',
+    name: 'Industrial Estate Bolmong',
+    location: 'Bolaang Mongondow, SULUT',
     year: '2025',
-    tags: ['PARIWISATA', 'KWS. KHUSUS'],
+    tags: ['MANUFAKTUR', 'HILIRISASI'],
     image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
   },
   {
     id: 2,
-    name: 'Bitung Industrial Port Zone',
-    location: 'Bitung, SULUT',
-    year: '2024',
-    tags: ['LOGISTIK', 'PELABUHAN'],
+    name: 'Manado Marine City',
+    location: 'Manado, SULUT',
+    year: '2025',
+    tags: ['MARITIM', 'PARIWISATA'],
     image: '/Images/Sulawesi/bitung_port_1778426013679.png',
   },
   {
     id: 3,
-    name: 'Logistics Gateway North Sulawesi',
-    location: 'Manado, SULUT',
-    year: '2026',
-    tags: ['INFRASTRUKTUR', 'STRATEGIS'],
-    image: 'https://images.unsplash.com/photo-1541888086225-ee82fb612ca4?q=80&w=2070&auto=format&fit=crop',
-  },
-  {
-    id: 4,
-    name: 'Geothermal Energy Lahendong',
+    name: 'Green Energy Geothermal',
     location: 'Tomohon, SULUT',
     year: '2025',
     tags: ['ENERGI', 'TERBARUKAN'],
     image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    id: 5,
-    name: 'Likupang Eco-Resort Development',
-    location: 'Likupang, SULUT',
-    year: '2026',
-    tags: ['PARIWISATA', 'RESORT'],
-    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
+    id: 4,
+    name: 'Agribusiness Hub',
+    location: 'Minahasa, SULUT',
+    year: '2025',
+    tags: ['AGRIBISNIS', 'INDUSTRI'],
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop',
   },
   {
-    id: 6,
-    name: 'Agro-Industrial Processing Zone',
-    location: 'Minahasa Selatan, SULUT',
-    year: '2024',
-    tags: ['PERTANIAN', 'INDUSTRI'],
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop',
+    id: 5,
+    name: 'Eco-Tourism Resort',
+    location: 'Likupang, SULUT',
+    year: '2025',
+    tags: ['EKOWISATA', 'RESORT'],
+    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
   }
 ];const ProjectCard = ({ project, idx }: { project: typeof sulutProjects[0], idx: number }) => {
   const [imgSrc, setImgSrc] = React.useState(project.image);
@@ -146,11 +138,10 @@ export default function ProjectSection() {
         <div className="max-w-7xl mx-auto px-6 mb-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div className="flex-1">
             <h2 className="text-3xl md:text-[42px] font-bold text-slate-900 tracking-tight mb-5 leading-[1.1]">
-              Peluang <span className="text-[#00529C]">Investasi Yang</span> <br />
-              Mendefinisikan Masa Depan
+              Proyek Investasi Unggulan
             </h2>
             <p className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-2xl">
-              Katalog proyek kami menampilkan berbagai peluang, dari infrastruktur strategis fungsional hingga kawasan pariwisata terpadu kelas dunia.
+              Pilihan proyek di berbagai sektor strategis
             </p>
           </div>
           

@@ -10,51 +10,51 @@ import { motion } from 'framer-motion';
 const topProjects = [
   {
     id: 1,
-    name: 'KEK Likupang — Waterfront Tourism City',
+    name: 'Likupang',
     sector: 'Pariwisata',
     image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
     w: 'w-[320px] md:w-[450px]'
   },
   {
     id: 2,
-    name: 'Bitung Industrial Port Zone',
+    name: 'Bitung',
     sector: 'Logistik',
     image: '/Images/Sulawesi/bitung_port_1778426013679.png',
     w: 'w-[240px] md:w-[300px]'
   },
   {
     id: 3,
-    name: 'Logistics Gateway North Sulawesi',
-    sector: 'Infrastruktur',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop',
+    name: 'Bunaken',
+    sector: 'Marine Park',
+    image: '/Images/Sulawesi/bunaken_reef_1778426086437.png',
     w: 'w-[280px] md:w-[400px]'
   },
   {
     id: 4,
-    name: 'Geothermal Energy Lahendong',
-    sector: 'Energi Terbarukan',
-    image: 'https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=2070&auto=format&fit=crop',
+    name: 'Kabasaran',
+    sector: 'Budaya',
+    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[260px] md:w-[350px]'
   },
   {
     id: 5,
-    name: 'Likupang Eco-Resort Development',
-    sector: 'Pariwisata',
-    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
+    name: 'Tinutuan',
+    sector: 'Kuliner',
+    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[280px] md:w-[420px]'
   },
   {
     id: 6,
-    name: 'Agro-Industrial Processing Zone',
-    sector: 'Pertanian',
-    image: 'https://images.unsplash.com/photo-1464226184884-fa280b67c35e?q=80&w=2070&auto=format&fit=crop',
+    name: 'Geothermal',
+    sector: 'Energi Hijau',
+    image: 'https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[260px] md:w-[380px]'
   },
   {
     id: 13,
-    name: 'North Sulawesi Digital Hub',
-    sector: 'Teknologi',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop',
+    name: 'Manado',
+    sector: 'Metropolitan',
+    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[280px] md:w-[400px]'
   }
 ];
@@ -62,51 +62,51 @@ const topProjects = [
 const bottomProjects = [
   {
     id: 7,
-    name: 'Manado Urban Modernization',
-    sector: 'Properti',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop',
+    name: 'Perkebunan',
+    sector: 'Agrikultur',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[320px] md:w-[420px]'
   },
   {
     id: 8,
-    name: 'Talaud Renewable Grid',
-    sector: 'Energi',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop',
+    name: 'Kawasan Industri',
+    sector: 'Manufaktur',
+    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[240px] md:w-[320px]'
   },
   {
     id: 9,
-    name: 'Sangihe Deep Sea Port',
-    sector: 'Maritim',
-    image: '/Images/Sulawesi/bunaken_reef_1778426086437.png',
+    name: 'Minahasa',
+    sector: 'Highlands',
+    image: '/Images/Sulawesi/minahasa_house_1778426047038.png',
     w: 'w-[280px] md:w-[380px]'
   },
   {
     id: 10,
-    name: 'Kotamobagu Food Estate',
-    sector: 'Pertanian',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop',
+    name: 'Investasi',
+    sector: 'Masa Depan',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[260px] md:w-[410px]'
   },
   {
     id: 11,
-    name: 'Lembeh Strait Logistics',
-    sector: 'Logistik',
-    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=2070&auto=format&fit=crop',
+    name: 'Ekowisata',
+    sector: 'Destinasi',
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop',
     w: 'w-[280px] md:w-[360px]'
   },
   {
     id: 12,
-    name: 'Tomohon Wellness Center',
-    sector: 'Kesehatan',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2070&auto=format&fit=crop',
+    name: 'Infrastruktur',
+    sector: 'Konektivitas',
+    image: 'https://images.unsplash.com/photo-1541888086225-ee82fb612ca4?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[260px] md:w-[440px]'
   },
   {
     id: 14,
-    name: 'Minahasa Creative District',
-    sector: 'Ekonomi Kreatif',
-    image: '/Images/Sulawesi/minahasa_house_1778426047038.png',
+    name: 'Bentang Alam',
+    sector: 'Sulawesi Utara',
+    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop',
     w: 'w-[260px] md:w-[380px]'
   }
 ];
@@ -224,7 +224,7 @@ export default function WhySulut() {
               className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default"
             >
               <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#00529C] transition-colors">Gerbang Cincin Pasifik</h4>
-              <p className="text-sm text-slate-500 leading-relaxed">Posisi strategis untuk jalur perdagangan internasional Asia-Pasifik.</p>
+              <p className="text-sm text-slate-500 leading-relaxed">Posisi strategis untuk perdagangan Asia-Pasifik</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -233,7 +233,7 @@ export default function WhySulut() {
               className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default"
             >
               <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#00529C] transition-colors">3 Kawasan Ekonomi Khusus</h4>
-              <p className="text-sm text-slate-500 leading-relaxed">KEK Likupang, KEK Bitung, dan KPBPB Manado-Bitung yang aktif.</p>
+              <p className="text-sm text-slate-500 leading-relaxed">KEK Likupang, KEK Bitung, KPBPB Manado-Bitung</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -242,7 +242,7 @@ export default function WhySulut() {
               className="bg-white rounded-xl p-6 border border-slate-200 hover:border-[#00529C] hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center group cursor-default"
             >
               <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#00529C] transition-colors">Pertumbuhan Konsisten</h4>
-              <p className="text-sm text-slate-500 leading-relaxed">5,62% YoY, secara konsisten melampaui rata-rata nasional.</p>
+              <p className="text-sm text-slate-500 leading-relaxed">5,62% YoY, melampaui rata-rata nasional</p>
             </motion.div>
           </div>
         </div>

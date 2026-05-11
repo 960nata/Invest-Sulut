@@ -1,126 +1,72 @@
 'use client';
 
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactSection() {
   return (
     <section className="relative py-24 bg-white overflow-hidden border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Left Column - Text & Info */}
-          <div className="lg:col-span-6 flex flex-col justify-between gap-6">
+          <div className="lg:col-span-7 flex flex-col gap-6">
             <div>
-              <span className="text-[#00529C] text-xs font-bold uppercase tracking-widest">Get In Touch</span>
+              <span className="text-[#00529C] text-xs font-bold uppercase tracking-widest">Download Center</span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight leading-[1.1] mt-2 mb-6">
-                Let Us Do The Work, So You Can Focus On What Matters
+                Unduh Buku Presentasi Investasi Sulawesi Utara
               </h2>
               <p className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-xl">
-                Tim RIRU Sulawesi Utara siap memberikan pendampingan personal, data akurat, dan solusi perizinan untuk kesuksesan investasi Anda.
+                Data investasi, proyek unggulan, dan peluang strategis — tersedia dalam satu dokumen komprehensif.
               </p>
             </div>
 
-            {/* Contact Cards (2 Columns) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Email Card (Blue) */}
-              <div className="bg-[#00529C] text-white p-6 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-transform cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#00529C]">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold">Email</div>
-                  <div className="text-xs text-blue-100">rirusulut@gmail.com</div>
-                </div>
+            {/* Features/Stats in Presentation Book */}
+            <div className="grid grid-cols-2 gap-4 mt-4">
+              <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+                <div className="text-[#00529C] font-bold text-xl mb-1">50+</div>
+                <div className="text-xs text-slate-500 font-medium">Halaman Data</div>
               </div>
-
-              {/* Phone Card (Blue) */}
-              <div className="bg-[#00529C] text-white p-6 rounded-2xl flex items-center gap-4 hover:scale-[1.02] transition-transform cursor-pointer">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#00529C]">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-sm font-bold">Phone</div>
-                  <div className="text-xs text-blue-100">+62 811 436 060</div>
-                </div>
+              <div className="border border-slate-100 rounded-xl p-4 bg-slate-50/50">
+                <div className="text-[#00529C] font-bold text-xl mb-1">Q1 2025</div>
+                <div className="text-xs text-slate-500 font-medium">Data Terkini</div>
               </div>
-            </div>
-
-            {/* Google Map Attempt 2 */}
-            <div className="relative w-full flex-1 min-h-[250px] rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-              <iframe 
-                src="https://www.google.com/maps?q=Bank+Indonesia+Manado&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true}
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Bank Indonesia North Sulawesi Location"
-              ></iframe>
             </div>
           </div>
 
-          {/* Right Column - Form */}
-          <div className="lg:col-span-6 bg-[#F3F4F6] p-8 md:p-10 rounded-3xl">
-            <form className="flex flex-col gap-6">
+          {/* Right Column - Download Card */}
+          <div className="lg:col-span-5">
+            <div className="bg-[#001A33] text-white p-8 md:p-10 rounded-3xl relative overflow-hidden group">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 blur-3xl rounded-full"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#00529C]/20 blur-3xl rounded-full"></div>
               
-              {/* Name Field */}
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-bold text-slate-700" htmlFor="name">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  placeholder="Your Name" 
-                  className="w-full px-5 py-3.5 rounded-xl bg-white border border-transparent focus:border-[#00529C] outline-none transition-all text-sm"
-                />
-              </div>
-
-              {/* Email Field */}
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-bold text-slate-700" htmlFor="email">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  placeholder="Your Email" 
-                  className="w-full px-5 py-3.5 rounded-xl bg-white border border-transparent focus:border-[#00529C] outline-none transition-all text-sm"
-                />
-              </div>
-
-              {/* Message Field */}
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-bold text-slate-700" htmlFor="message">Message</label>
-                <textarea 
-                  id="message" 
-                  rows={4}
-                  placeholder="Your Message" 
-                  className="w-full px-5 py-3.5 rounded-xl bg-white border border-transparent focus:border-[#00529C] outline-none transition-all text-sm resize-none"
-                ></textarea>
-              </div>
-
-              {/* Checkboxes */}
-              <div className="flex flex-col gap-3">
-                <span className="text-sm font-bold text-slate-700">Select Topic</span>
-                <div className="flex flex-wrap gap-6">
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4 accent-[#00529C]" />
-                    <span className="text-sm text-slate-600 font-medium">Let's Start Project</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input type="checkbox" className="w-4 h-4 accent-[#00529C]" />
-                    <span className="text-sm text-slate-600 font-medium">General Inquiry</span>
-                  </label>
+              <div className="relative z-10 flex flex-col items-center text-center gap-6">
+                <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20 group-hover:scale-110 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
                 </div>
-              </div>
+                
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Presentation Book</h3>
+                  <p className="text-blue-200 text-sm">Versi Bahasa Indonesia & English</p>
+                </div>
 
-              {/* Submit Button */}
-              <button 
-                type="submit" 
-                className="bg-[#00529C] text-white font-bold py-4 px-8 rounded-xl hover:bg-[#003d75] transition-all duration-300 shadow-xl shadow-blue-900/10 mt-2"
-              >
-                Submit Now
-              </button>
-            </form>
+                <Link 
+                  href="/investment/presentation-book" 
+                  className="w-full bg-[#00529C] hover:bg-[#003d73] text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-black/20"
+                >
+                  <span>Lihat Semua Buku Presentasi</span>
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+                
+                <p className="text-white/50 text-[11px] mt-2">
+                  Format PDF · Ukuran File ~15MB
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>

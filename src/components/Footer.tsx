@@ -18,7 +18,7 @@ export default function Footer() {
              />
            </div>
            <p className="max-w-md text-lg leading-relaxed text-slate-300 font-medium">
-             Official Regional Investor Relations Unit (RIRU) of North Sulawesi. Your primary institutional portal for strategic investment, global trade, and sustainable tourism.
+             Portal Investasi Resmi Sulawesi Utara. Gerbang strategis menuju pasar Asia Timur and Pasifik.
            </p>
            <div className="flex gap-4">
               <div className="w-12 h-12 rounded-xl bg-blue-950 border border-blue-800 flex items-center justify-center text-blue-400 hover:bg-blue-600 hover:text-white hover:scale-110 transition-all cursor-pointer">
@@ -57,8 +57,9 @@ export default function Footer() {
             <li className="flex items-start gap-4">
                <div className="bg-blue-900/50 p-2.5 rounded-xl"><Phone className="w-5 h-5 text-blue-400" /></div>
                <div className="flex flex-col gap-1">
-                  <span className="text-white font-black text-[10px] uppercase tracking-widest">Direct Line</span>
-                  <span className="font-bold text-slate-300">+62 811 436 060</span>
+                  <span className="text-white font-black text-[10px] uppercase tracking-widest">Hubungi Kami</span>
+                  <span className="font-bold text-slate-300 text-xs">+62811436060 (Syaloom)</span>
+                  <span className="font-bold text-slate-300 text-xs">+6287800010190 (Sigit)</span>
                </div>
             </li>
             <li className="flex items-start gap-4">

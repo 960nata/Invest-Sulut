@@ -15,7 +15,7 @@ const stats = [
   { label: 'Indeks Pembangunan', value: 74.36, prefix: '', suffix: '', icon: <PieChart className="w-5 h-5" />, desc: 'IPM Tahun 2024', decimals: 2 },
   { label: 'Wisatawan Asing', value: 47575, prefix: '', suffix: '', icon: <MapPin className="w-5 h-5" />, desc: 'Kunjungan 2024', decimals: 0 },
   { label: 'Jumlah Penduduk', value: 2.7, prefix: '', suffix: ' Jt', icon: <Users className="w-5 h-5" />, desc: 'Sumber BPS 2024', decimals: 1 },
-  { label: 'Upah Minimum', value: 3.7, prefix: 'Rp', suffix: 'Jt', icon: <Landmark className="w-5 h-5" />, desc: 'Per Bulan 2025', decimals: 1 },
+  { label: 'Ekspor', value: 279, prefix: '$', suffix: ' Jt', icon: <Landmark className="w-5 h-5" />, desc: 'Tumbuh 63% YoY', decimals: 0 },
 ];
 
 export default function EconomicSnapshot() {
@@ -43,8 +43,8 @@ export default function EconomicSnapshot() {
   }, [inView]);
 
   const pdrbSeries = [
-    { name: 'Sulawesi Utara', data: [2.1, 5.0, 3.2, 1.8, 1.5] },
-    { name: 'Nasional', data: [1.9, 5.5, 2.6, 2.1, 1.7] }
+    { name: 'Sulawesi Utara', data: [3.5, 5.1, 5.3, 5.4, 5.62] },
+    { name: 'Nasional', data: [3.7, 5.3, 5.0, 5.1, 4.87] }
   ];
 
   const inflasiSeries = [

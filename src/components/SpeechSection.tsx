@@ -8,16 +8,16 @@ import { cn } from '@/lib/utils';
 
 const speeches = [
   {
-    name: "Olly Dondokambey",
-    title: "Governor of North Sulawesi",
-    quote: "North Sulawesi is open for business. Our commitment to sustainable development and ease of doing business makes us the premier investment destination in the Pacific Rim.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop" // Placeholder for Governor
+    name: "Mayjen TNI (Purn) Yulius Selvanus Komaling, SE",
+    title: "Gubernur Sulawesi Utara",
+    quote: "Ekonomi Sulawesi Utara yang berkembang pesat dan lingkungan investasi yang kondusif menjadikannya tujuan ideal bagi investor yang mencari peluang menguntungkan.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
   },
   {
-    name: "Andry Prasmuko",
-    title: "Head of Bank Indonesia North Sulawesi",
-    quote: "Maintaining monetary stability and fostering a robust investment climate is our priority. We provide the data and insights necessary for informed investor decisions.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop" // Placeholder for BI Head
+    name: "Joko Supratikto",
+    title: "Kepala Perwakilan Bank Indonesia Sulawesi Utara",
+    quote: "Sulawesi Utara menawarkan iklim investasi yang berkelanjutan, inklusif, dan terhubung secara global, didukung oleh infrastruktur strategis dan ekonomi yang terbuka.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
   }
 ];
 
@@ -52,10 +52,10 @@ export default function SpeechSection() {
       <div className="relative z-20 max-w-5xl mx-auto w-full">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-white mb-4 leading-[1.1]">
-            Strategic <span className="text-blue-200">Leadership</span>
+            Pidato Kepala Daerah
           </h2>
           <p className="text-blue-100/80 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
-            Strong synergy between the provincial government and monetary authority.
+            Visi dan komitmen kepemimpinan untuk masa depan ekonomi Sulawesi Utara.
           </p>
         </div>
 
