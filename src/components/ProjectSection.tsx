@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const sulutProjects = [
   {
@@ -52,10 +53,14 @@ const sulutProjects = [
   const [imgSrc, setImgSrc] = React.useState(project.image);
 
   return (
-    <div className={cn(
-      "w-full transition-transform duration-500",
-      idx % 2 === 0 ? "-translate-y-8" : "translate-y-8"
-    )}>
+    <motion.div 
+      className="w-full"
+      initial={{ opacity: 0, y: idx % 2 === 0 ? 0 : 64 }}
+      whileInView={{ opacity: 1, y: idx % 2 === 0 ? -32 : 32 }}
+      viewport={{ once: true }}
+      whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+    >
       <Link 
         href={`/investment/projects/${project.id}`}
         className="flex flex-col group cursor-pointer"
@@ -100,7 +105,7 @@ const sulutProjects = [
           </div>
         </div>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

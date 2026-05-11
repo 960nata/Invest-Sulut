@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const newsItems = [
   {
@@ -73,70 +74,84 @@ export default function LatestNews() {
           {/* Left Column - Featured News Card */}
           <div className="lg:col-span-7">
             {featuredNews && (
-              <Link 
-                href={`/news/${featuredNews.id}`} 
-                className="group block relative h-[360px] md:h-[464px] rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:border-[#00529C] hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-500"
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               >
-                <Image 
-                  src={featuredNews.image} 
-                  alt={featuredNews.title} 
-                  fill 
-                  className="object-cover transition-transform duration-[1000ms] group-hover:scale-105"
-                />
-                {/* Overlay Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#001A33]/90 via-black/20 to-transparent"></div>
-                
-                {/* Content Overlay */}
-                <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
-                  <div className="flex items-center gap-4 mb-5">
-                    <span className="bg-[#00529C] text-white text-[10px] font-bold px-3 py-1.5 rounded-sm uppercase tracking-wider">
-                      {featuredNews.category}
-                    </span>
-                    <span className="text-white/70 text-xs font-medium tracking-wide">
-                      {featuredNews.date}
-                    </span>
+                <Link 
+                  href={`/news/${featuredNews.id}`} 
+                  className="group block relative h-[360px] md:h-[464px] rounded-xl overflow-hidden border border-slate-100 shadow-sm hover:border-[#00529C] hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-500"
+                >
+                  <Image 
+                    src={featuredNews.image} 
+                    alt={featuredNews.title} 
+                    fill 
+                    className="object-cover transition-transform duration-[1000ms] group-hover:scale-105"
+                  />
+                  {/* Overlay Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#001A33]/90 via-black/20 to-transparent"></div>
+                  
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full">
+                    <div className="flex items-center gap-4 mb-5">
+                      <span className="bg-[#00529C] text-white text-[10px] font-bold px-3 py-1.5 rounded-sm uppercase tracking-wider">
+                        {featuredNews.category}
+                      </span>
+                      <span className="text-white/70 text-xs font-medium tracking-wide">
+                        {featuredNews.date}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight group-hover:text-blue-300 transition-colors tracking-tight">
+                      {featuredNews.title}
+                    </h3>
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight group-hover:text-blue-300 transition-colors tracking-tight">
-                    {featuredNews.title}
-                  </h3>
-                </div>
-              </Link>
+                </Link>
+              </motion.div>
             )}
           </div>
 
           {/* Right Column - News List items with refined style */}
           <div className="lg:col-span-5 flex flex-col gap-4">
             {otherNews.map((news, idx) => (
-              <Link 
-                key={news.id} 
-                href={`/news/${news.id}`} 
-                className={cn(
-                  "flex gap-6 group transition-all p-4 rounded-xl border border-transparent hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-sm",
-                  idx !== otherNews.length - 1 ? "border-b-slate-100" : ""
-                )}
+              <motion.div
+                key={news.id}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.4, 0, 0.2, 1] }}
               >
-                <div className="relative w-28 h-20 md:w-40 md:h-28 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 shadow-sm">
-                  <Image 
-                    src={news.image} 
-                    alt={news.title} 
-                    fill 
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
-                <div className="flex flex-col justify-center flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-[10px] font-bold text-[#00529C] bg-blue-50 px-2 py-0.5 rounded uppercase tracking-widest">
-                      {news.category}
-                    </span>
-                    <span className="text-slate-400 text-[11px] font-medium">
-                      {news.date}
-                    </span>
+                <Link 
+                  href={`/news/${news.id}`} 
+                  className={cn(
+                    "flex gap-6 group transition-all p-4 rounded-xl border border-transparent hover:border-slate-100 hover:bg-slate-50/50 hover:shadow-sm",
+                    idx !== otherNews.length - 1 ? "border-b-slate-100" : ""
+                  )}
+                >
+                  <div className="relative w-28 h-20 md:w-40 md:h-28 flex-shrink-0 rounded-xl overflow-hidden bg-slate-100 shadow-sm">
+                    <Image 
+                      src={news.image} 
+                      alt={news.title} 
+                      fill 
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
                   </div>
-                  <h4 className="text-base md:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#00529C] transition-colors line-clamp-2 tracking-tight">
-                    {news.title}
-                  </h4>
-                </div>
-              </Link>
+                  <div className="flex flex-col justify-center flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-[10px] font-bold text-[#00529C] bg-blue-50 px-2 py-0.5 rounded uppercase tracking-widest">
+                        {news.category}
+                      </span>
+                      <span className="text-slate-400 text-[11px] font-medium">
+                        {news.date}
+                      </span>
+                    </div>
+                    <h4 className="text-base md:text-lg font-bold text-slate-900 leading-snug group-hover:text-[#00529C] transition-colors line-clamp-2 tracking-tight">
+                      {news.title}
+                    </h4>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
 

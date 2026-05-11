@@ -66,7 +66,8 @@ export default function SpeechSection() {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -50, scale: 0.95 }}
               transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-              className="bg-white/20 md:bg-white/10 backdrop-blur-xl rounded-[2.5rem] p-6 md:p-12 border border-white/20 flex flex-col md:flex-row gap-8 items-center md:items-center shadow-2xl shadow-black/30"
+              whileHover={{ scale: 1.01 }}
+              className="bg-white/20 md:bg-white/10 backdrop-blur-xl rounded-[2.5rem] p-6 md:p-12 border border-white/20 flex flex-col md:flex-row gap-8 items-center md:items-center shadow-2xl shadow-black/30 cursor-pointer"
             >
               <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border-2 border-white/30">
                 <Image src={speeches[currentIndex].image} alt={speeches[currentIndex].name} fill className="object-cover object-top" />
