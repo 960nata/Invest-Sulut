@@ -34,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning className={`${jakarta.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-sans antialiased" suppressHydrationWarning>
+      <body className="font-sans antialiased bg-[#001A33]" suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />
@@ -56,6 +56,7 @@ export default async function RootLayout({
             }
           `}
         </Script>
+
       </body>
     </html>
   );

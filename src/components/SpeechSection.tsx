@@ -64,10 +64,13 @@ export default function SpeechSection() {
               className="bg-white/20 md:bg-white/10 md:backdrop-blur-xl rounded-[2.5rem] p-6 md:p-12 border border-white/20 flex flex-col md:flex-row gap-8 items-center md:items-center shadow-2xl shadow-black/30"
             >
               <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border-2 border-white/30">
-                <Image src={speeches[currentIndex].image} alt={speeches[currentIndex].name} fill className="object-cover" />
+                <Image src={speeches[currentIndex].image} alt={speeches[currentIndex].name} fill className="object-cover object-top" />
               </div>
               <div className="flex flex-col gap-4 text-white">
                 <Quote className="w-10 h-10 text-white/20" />
+                {currentIndex === 0 && (
+                  <div className="text-sm font-bold text-blue-200 uppercase tracking-wider">Pidato Kepala Daerah</div>
+                )}
                 <p className="text-lg md:text-xl font-medium italic leading-relaxed tracking-tight text-white/90">
                   "{speeches[currentIndex].quote}"
                 </p>

@@ -21,10 +21,10 @@ export default function InfinitePartnerStrip() {
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
-            Our <span className="text-[#00529C]">Partners</span>
+            Di Dukung <span className="text-[#00529C]">Oleh</span>
           </h2>
           <p className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-3xl mx-auto">
-            We collaborate with leading institutions to facilitate investment and development in Sulawesi Utara, ensuring a robust and sustainable economic growth.
+            Kami bekerja sama dengan berbagai lembaga terkemuka untuk memfasilitasi investasi dan pembangunan di Sulawesi Utara, demi memastikan pertumbuhan ekonomi yang kuat dan berkelanjutan.
           </p>
         </div>
 
