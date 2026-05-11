@@ -54,9 +54,7 @@ export default function SpeechSection() {
           <h2 className="text-3xl md:text-[42px] font-bold tracking-tight text-white mb-4 leading-[1.1]">
             Pidato Kepala Daerah
           </h2>
-          <p className="text-blue-100/80 text-base md:text-lg font-normal leading-relaxed max-w-2xl mx-auto">
-            Visi dan komitmen kepemimpinan untuk masa depan ekonomi Sulawesi Utara.
-          </p>
+
         </div>
 
         {/* Apple Style Glass Carousel */}
@@ -68,7 +66,7 @@ export default function SpeechSection() {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: -50, scale: 0.95 }}
               transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-              className="bg-white/20 md:bg-white/10 md:backdrop-blur-xl rounded-[2.5rem] p-6 md:p-12 border border-white/20 flex flex-col md:flex-row gap-8 items-center md:items-start shadow-2xl shadow-black/30"
+              className="bg-white/20 md:bg-white/10 md:backdrop-blur-xl rounded-[2.5rem] p-6 md:p-12 border border-white/20 flex flex-col md:flex-row gap-8 items-center md:items-center shadow-2xl shadow-black/30"
             >
               <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0 rounded-2xl overflow-hidden shadow-xl border-2 border-white/30">
                 <Image src={speeches[currentIndex].image} alt={speeches[currentIndex].name} fill className="object-cover" />
