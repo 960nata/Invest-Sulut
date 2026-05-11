@@ -123,11 +123,11 @@ export default function ProjectSection() {
   const displayProjects = [...sulutProjects, ...sulutProjects, ...sulutProjects];
 
   return (
-    <section className="relative w-full bg-[#fdfdfd] pt-24 pb-48 overflow-hidden font-sans border-t border-slate-100">
+    <section className="relative w-full bg-[#fdfdfd] pt-12 md:pt-24 pb-20 md:pb-48 overflow-hidden font-sans border-t border-slate-100">
       
       {/* Background Watermark Text */}
-      <div className="absolute bottom-[-40px] left-0 w-full text-center overflow-hidden pointer-events-none z-0">
-        <h1 className="text-[12rem] md:text-[20rem] font-black text-slate-100/60 tracking-tighter leading-none select-none uppercase">
+      <div className="absolute bottom-[-20px] md:bottom-[-40px] left-0 w-full text-center overflow-hidden pointer-events-none z-0">
+        <h1 className="text-[6rem] md:text-[20rem] font-black text-slate-100/60 tracking-tighter leading-none select-none uppercase">
           Investasi
         </h1>
       </div>
@@ -166,7 +166,7 @@ export default function ProjectSection() {
  
         {/* Embla Carousel Viewport - Full Width for Peek Effect */}
         <div className="relative w-full overflow-hidden" ref={emblaRef}>
-          <div className="flex pt-10 pb-20">
+          <div className="flex pt-5 md:pt-10 pb-10 md:pb-20">
             {displayProjects.map((project, idx) => (
               <div 
                 key={`${project.id}-${idx}`} 
