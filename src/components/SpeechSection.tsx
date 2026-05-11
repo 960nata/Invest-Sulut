@@ -11,13 +11,13 @@ const speeches = [
     name: "Mayjen TNI (Purn) Yulius Selvanus Komaling, SE",
     title: "Gubernur Sulawesi Utara",
     quote: "Ekonomi Sulawesi Utara yang berkembang pesat dan lingkungan investasi yang kondusif menjadikannya tujuan ideal bagi investor yang mencari peluang menguntungkan.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop"
+    image: "/Images/Leadrer/portrait_governor.webp"
   },
   {
     name: "Joko Supratikto",
     title: "Kepala Perwakilan Bank Indonesia Sulawesi Utara",
-    quote: "Sulawesi Utara menawarkan iklim investasi yang berkelanjutan, inklusif, dan terhubung secara global, didukung oleh infrastruktur strategis dan ekonomi yang terbuka.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
+    quote: "Sulawesi Utara menawarkan iklim investasi yang berkelanjutan, inklusif, dan terhubung secara global, didukung oleh infrastruktur strategis and ekonomi yang terbuka.",
+    image: "/Images/Leadrer/portrait_bi.webp"
   }
 ];
 
