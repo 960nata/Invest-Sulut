@@ -66,7 +66,7 @@ const defaultSlides = [
 ];
 
 export default function Hero({ slides = defaultSlides }: { slides?: typeof defaultSlides }) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     duration: 30,
     dragFree: false
@@ -101,10 +101,10 @@ export default function Hero({ slides = defaultSlides }: { slides?: typeof defau
         }
 
         const translateImg = diffToTarget * 5;
-        const translateText = diffToTarget * 60; 
+        const translateText = diffToTarget * 60;
 
         const slideNode = emblaApi.slideNodes()[slideIndex];
-        
+
         // Image Parallax (if any)
         const parallaxImg = slideNode.querySelector('.parallax-layer') as HTMLElement;
         if (parallaxImg) {
@@ -141,30 +141,30 @@ export default function Hero({ slides = defaultSlides }: { slides?: typeof defau
       {/* Embla Viewport */}
       <div className="relative h-[600px] md:h-[850px] w-full overflow-hidden bg-slate-900 touch-pan-y cursor-grab active:cursor-grabbing" ref={emblaRef}>
         {/* Embla Container */}
-          <div className="flex h-full w-full">
-            {slides.map((slide) => (
-              <div key={slide.id} className="flex-[0_0_100%] min-w-0 relative h-full overflow-hidden">
-                <div className="relative h-full w-full">
-                  {/* Background Image */}
-                  <div className="absolute inset-0 z-0 overflow-hidden">
-                    <div className="parallax-layer absolute inset-[-5%] z-0">
-                      <Image
-                        src={slide.image} 
-                        alt={slide.title}
-                        fill
-                        className="object-cover pointer-events-none"
-                        priority
-                        quality={100}
-                        unoptimized
-                        draggable={false}
-                      />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#001A33]/85 via-[#001A33]/50 to-[#001A33]/10 pointer-events-none"></div>
+        <div className="flex h-full w-full">
+          {slides.map((slide) => (
+            <div key={slide.id} className="flex-[0_0_100%] min-w-0 relative h-full overflow-hidden">
+              <div className="relative h-full w-full">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0 overflow-hidden">
+                  <div className="parallax-layer absolute inset-[-5%] z-0">
+                    <Image
+                      src={slide.image}
+                      alt={slide.title}
+                      fill
+                      className="object-cover pointer-events-none"
+                      priority
+                      quality={100}
+                      unoptimized
+                      draggable={false}
+                    />
                   </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#001A33]/85 via-[#001A33]/50 to-[#001A33]/10 pointer-events-none"></div>
+                </div>
 
-                  {/* Content Container - Left Aligned */}
-                  <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center pt-10 select-none">
-                    <motion.div
+                {/* Content Container - Left Aligned */}
+                <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center pt-10 select-none">
+                  <motion.div
                     initial={{ opacity: 0, x: -40 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -173,14 +173,14 @@ export default function Hero({ slides = defaultSlides }: { slides?: typeof defau
                     <h1 className="text-4xl md:text-[56px] font-bold text-white mb-6 leading-[1.2] tracking-tight font-sans">
                       {slide.title}
                     </h1>
-                    
+
                     <p className="text-base md:text-lg text-white/80 max-w-2xl mb-10 font-normal leading-relaxed">
                       {slide.desc}
                     </p>
 
                     {/* Standardized BI Blue Button */}
-                    <Link 
-                      href={slide.btnUrl} 
+                    <Link
+                      href={slide.btnUrl}
                       draggable={false}
                       className="bg-[#00529C] text-white px-8 py-4 rounded-full text-[15px] font-bold flex items-center gap-3 hover:bg-white hover:text-[#00529C] transition-all duration-300 shadow-xl shadow-blue-900/20 w-fit group"
                     >
@@ -193,19 +193,20 @@ export default function Hero({ slides = defaultSlides }: { slides?: typeof defau
             </div>
           ))}
         </div>
-        </div>
+      </div>
 
 
       {/* Subtle Slide Indicators */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-         {slides.map((_, idx) => (
-           <button 
-             key={idx}
-             onClick={() => emblaApi?.scrollTo(idx)}
-             className={`h-1.5 rounded-full transition-all duration-500 ${selectedIndex === idx ? 'w-8 bg-white' : 'w-1.5 bg-white/30 hover:bg-white/50'}`}
-           />
-         ))}
+        {slides.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => emblaApi?.scrollTo(idx)}
+            className={`h-1.5 rounded-full transition-all duration-500 ${selectedIndex === idx ? 'w-8 bg-white' : 'w-1.5 bg-white/30 hover:bg-white/50'}`}
+          />
+        ))}
       </div>
+
     </section>
   );
 }
