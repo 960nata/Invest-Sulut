@@ -261,7 +261,7 @@ export default function WhySulut() {
       </div>
 
       {/* Top Carousel (LTR Animation) */}
-      <div className="marquee-container flex overflow-hidden pt-6 pb-6 -mt-8">
+      <div className="marquee-container flex overflow-hidden pt-6 pb-3 -mt-8">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...topProjects, ...topProjects].map((project, idx) => (
             <ProjectCard key={`top-${project.id}-${idx}`} project={project} idx={idx} />
@@ -270,7 +270,7 @@ export default function WhySulut() {
       </div>
 
       {/* Bottom Carousel (RTL Animation) */}
-      <div className="marquee-container flex overflow-hidden pt-6 pb-6">
+      <div className="marquee-container flex overflow-hidden pt-3 pb-6">
         <div className="flex animate-marquee-reverse whitespace-nowrap">
           {[...bottomProjects, ...bottomProjects].map((project, idx) => (
             <ProjectCard key={`bottom-${project.id}-${idx}`} project={project} idx={idx} />
