@@ -131,7 +131,7 @@ const ProjectCard = ({ project, idx }: { project: typeof topProjects[0], idx: nu
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }}
-      whileHover={{ scale: 1.05, y: -8, zIndex: 50 }}
+      whileHover={{ scale: 1.05, y: -8, zIndex: 50, transition: { duration: 0.3, ease: "easeOut", delay: 0 } }}
     >
       <div className="mr-8 h-full relative text-left">
         <div className="absolute inset-0 z-10 rounded-xl overflow-hidden bg-slate-800 transform-gpu">
