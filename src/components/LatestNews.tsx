@@ -13,7 +13,7 @@ const newsItems = [
     date: "15 April 2025",
     category: "PRESS RELEASE",
     isFeatured: true,
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop"
+    image: "/Images/News/investasi_q1_2025.avif"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const newsItems = [
     date: "10 April 2025",
     category: "NEWS",
     isFeatured: false,
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+    image: "/Images/News/kek_likupang_destinasi.avif"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const newsItems = [
     date: "5 April 2025",
     category: "NEWS",
     isFeatured: false,
-    image: "https://images.unsplash.com/photo-1520333789090-1afc82db536a?q=80&w=2071&auto=format&fit=crop"
+    image: "/Images/News/ekspor_sulut_2025.avif"
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const newsItems = [
     date: "2 April 2025",
     category: "UPDATE",
     isFeatured: false,
-    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop"
+    image: "/Images/News/infrastruktur_pariwisata.avif"
   }
 ];
 
