@@ -63,7 +63,7 @@ const sulutProjects = [
     location: 'Tomohon, SULUT',
     year: '2025',
     tags: ['ENERGI', 'TERBARUKAN'],
-    image: '/Images/why sulut/manado_skyline.avif',
+    image: '/Images/Project/pltp_lahendong.avif',
   },
   {
     id: 8,
@@ -71,7 +71,7 @@ const sulutProjects = [
     location: 'Likupang, SULUT',
     year: '2025',
     tags: ['ENERGI', 'SURYA'],
-    image: '/Images/why sulut/selat_lembeh.avif',
+    image: '/Images/Project/plts_likupang.avif',
   },
   {
     id: 9,
@@ -79,7 +79,7 @@ const sulutProjects = [
     location: 'SULUT',
     year: '2025',
     tags: ['ENERGI', 'AIR'],
-    image: '/Images/why sulut/bendungan_lolak.avif',
+    image: '/Images/Project/plta_sulut.avif',
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ const sulutProjects = [
     location: 'Bolaang Mongondow, SULUT',
     year: '2025',
     tags: ['PERTANIAN', 'PANGAN'],
-    image: '/Images/why sulut/tomohon_flower.avif',
+    image: '/Images/Project/padi_lolak.avif',
   },
   {
     id: 11,
@@ -95,7 +95,7 @@ const sulutProjects = [
     location: 'Minahasa, SULUT',
     year: '2025',
     tags: ['PERKEBUNAN', 'EKSPOR'],
-    image: '/Images/why sulut/rumah_adat_wale.avif',
+    image: '/Images/Project/perkebunan_kelapa.avif',
   },
   {
     id: 12,
@@ -103,7 +103,7 @@ const sulutProjects = [
     location: 'SULUT',
     year: '2025',
     tags: ['PERKEBUNAN', 'REMPAH'],
-    image: '/Images/why sulut/kolintang.avif',
+    image: '/Images/Project/cengkih_pala.avif',
   },
   {
     id: 13,
@@ -111,7 +111,7 @@ const sulutProjects = [
     location: 'Tomohon, SULUT',
     year: '2025',
     tags: ['AGROWISATA', 'HORTIKULTURA'],
-    image: '/Images/why sulut/tarian_maengket.avif',
+    image: '/Images/Project/agrowisata_tomohon.avif',
   },
   {
     id: 14,
@@ -119,7 +119,7 @@ const sulutProjects = [
     location: 'Bolaang Mongondow, SULUT',
     year: '2025',
     tags: ['PETERNAKAN', 'PANGAN'],
-    image: '/Images/why sulut/tarian_kabasaran.avif',
+    image: '/Images/Project/peternakan_bolmong.avif',
   },
   {
     id: 15,
@@ -127,7 +127,7 @@ const sulutProjects = [
     location: 'Bitung, SULUT',
     year: '2025',
     tags: ['INFRASTRUKTUR', 'PARIWISATA'],
-    image: '/Images/why sulut/waruga_minahasa.avif',
+    image: '/Images/Project/jembatan_lembeh.avif',
   }
 ];const ProjectCard = ({ project, idx }: { project: typeof sulutProjects[0], idx: number }) => {
   const [imgSrc, setImgSrc] = React.useState(project.image);
