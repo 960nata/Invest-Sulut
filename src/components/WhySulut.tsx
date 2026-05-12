@@ -131,7 +131,7 @@ const ProjectCard = ({ project, idx }: { project: typeof topProjects[0], idx: nu
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }}
-      whileHover={{ scale: 1.05, y: -12, zIndex: 50 }}
+      whileHover={{ scale: 1.05, y: -8, zIndex: 50 }}
     >
       <div className="mr-8 h-full relative text-left">
         <div className="absolute inset-0 z-10 rounded-xl overflow-hidden bg-slate-800 transform-gpu">
@@ -223,12 +223,12 @@ export default function WhySulut() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-5xl mb-12 mx-auto"
+            className="text-slate-500 text-base md:text-lg font-normal leading-relaxed max-w-5xl mb-6 mx-auto"
           >
             Terletak di jantung kawasan BIMP-EAGA dan Cincin Pasifik, Sulawesi Utara adalah pintu gerbang strategis menuju pasar Asia Timur dan Pasifik. Dengan tiga Kawasan Ekonomi Khusus aktif, pertumbuhan ekonomi di atas rata-rata nasional, dan kekayaan alam yang belum tersentuh — inilah provinsi yang menawarkan imbal hasil nyata bagi investor yang tepat.
           </motion.p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -261,7 +261,7 @@ export default function WhySulut() {
       </div>
 
       {/* Top Carousel (LTR Animation) */}
-      <div className="marquee-container flex overflow-hidden py-8">
+      <div className="marquee-container flex overflow-hidden pt-6 pb-6 -mt-8">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...topProjects, ...topProjects].map((project, idx) => (
             <ProjectCard key={`top-${project.id}-${idx}`} project={project} idx={idx} />
@@ -270,7 +270,7 @@ export default function WhySulut() {
       </div>
 
       {/* Bottom Carousel (RTL Animation) */}
-      <div className="marquee-container flex overflow-hidden py-8">
+      <div className="marquee-container flex overflow-hidden pt-6 pb-6">
         <div className="flex animate-marquee-reverse whitespace-nowrap">
           {[...bottomProjects, ...bottomProjects].map((project, idx) => (
             <ProjectCard key={`bottom-${project.id}-${idx}`} project={project} idx={idx} />
