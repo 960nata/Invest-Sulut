@@ -10,116 +10,128 @@ import { motion } from 'framer-motion';
 const topProjects = [
   {
     id: 1,
-    name: 'Likupang',
+    name: 'KEK Likupang',
     sector: 'Pariwisata',
-    image: '/Images/Sulawesi/likupang_resort_1778425988352.png',
+    image: '/Images/why sulut/kek_likupang.png',
     w: 'w-[320px] md:w-[450px]'
   },
   {
     id: 2,
-    name: 'Bitung',
-    sector: 'Logistik',
-    image: '/Images/Sulawesi/bitung_port_1778426013679.png',
+    name: 'Revitalisasi Taman Nasional Bunaken',
+    sector: 'Pariwisata',
+    image: '/Images/why sulut/bunaken.png',
     w: 'w-[240px] md:w-[300px]'
   },
   {
     id: 3,
-    name: 'Bunaken',
-    sector: 'Marine Park',
-    image: '/Images/Sulawesi/bunaken_reef_1778426086437.png',
+    name: 'Wisata Selat Lembeh',
+    sector: 'Pariwisata',
+    image: '/Images/why sulut/selat_lembeh.png',
     w: 'w-[280px] md:w-[400px]'
   },
   {
     id: 4,
-    name: 'Kabasaran',
-    sector: 'Budaya',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop',
+    name: 'Tomohon International Flower Festival',
+    sector: 'Pariwisata',
+    image: '/Images/why sulut/tomohon_flower.png',
     w: 'w-[260px] md:w-[350px]'
   },
   {
     id: 5,
-    name: 'Tinutuan',
-    sector: 'Kuliner',
-    image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2070&auto=format&fit=crop',
+    name: 'Manado Skyline (Bukit Doa)',
+    sector: 'Pariwisata',
+    image: '/Images/why sulut/manado_skyline.png',
     w: 'w-[280px] md:w-[420px]'
   },
   {
     id: 6,
-    name: 'Geothermal',
-    sector: 'Energi Hijau',
-    image: 'https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?q=80&w=2070&auto=format&fit=crop',
+    name: 'Jalan Tol Manado-Bitung',
+    sector: 'Infrastruktur',
+    image: '/Images/why sulut/tol_manado_bitung.png',
     w: 'w-[260px] md:w-[380px]'
   },
   {
-    id: 13,
-    name: 'Manado',
-    sector: 'Metropolitan',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop',
+    id: 7,
+    name: 'Bendungan Kuwil Kawangkoan',
+    sector: 'Infrastruktur',
+    image: '/Images/why sulut/bendungan_kuwil.png',
     w: 'w-[280px] md:w-[400px]'
+  },
+  {
+    id: 8,
+    name: 'Bendungan Lolak',
+    sector: 'Infrastruktur',
+    image: '/Images/why sulut/bendungan_lolak.png',
+    w: 'w-[300px] md:w-[430px]'
   }
 ];
 
 const bottomProjects = [
   {
-    id: 7,
-    name: 'Perkebunan',
-    sector: 'Agrikultur',
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop',
+    id: 9,
+    name: 'Perluasan Bandara Sam Ratulangi',
+    sector: 'Infrastruktur',
+    image: '/Images/why sulut/bandara_sam_ratulangi.png',
     w: 'w-[320px] md:w-[420px]'
   },
   {
-    id: 8,
-    name: 'Kawasan Industri',
-    sector: 'Manufaktur',
-    image: 'https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=2070&auto=format&fit=crop',
+    id: 10,
+    name: 'Pelabuhan Hub Internasional Bitung',
+    sector: 'Infrastruktur',
+    image: '/Images/why sulut/pelabuhan_bitung.png',
     w: 'w-[240px] md:w-[320px]'
   },
   {
-    id: 9,
-    name: 'Minahasa',
-    sector: 'Highlands',
-    image: '/Images/Sulawesi/minahasa_house_1778426047038.png',
+    id: 11,
+    name: 'Tarian Kabasaran',
+    sector: 'Kebudayaan',
+    image: '/Images/why sulut/tarian_kabasaran.png',
     w: 'w-[280px] md:w-[380px]'
   },
   {
-    id: 10,
-    name: 'Investasi',
-    sector: 'Masa Depan',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop',
+    id: 12,
+    name: 'Alat Musik Kolintang',
+    sector: 'Kebudayaan',
+    image: '/Images/why sulut/kolintang.png',
     w: 'w-[260px] md:w-[410px]'
   },
   {
-    id: 11,
-    name: 'Ekowisata',
-    sector: 'Destinasi',
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop',
+    id: 13,
+    name: 'Tarian Maengket',
+    sector: 'Kebudayaan',
+    image: '/Images/why sulut/tarian_maengket.png',
     w: 'w-[280px] md:w-[360px]'
   },
   {
-    id: 12,
-    name: 'Infrastruktur',
-    sector: 'Konektivitas',
-    image: 'https://images.unsplash.com/photo-1541888086225-ee82fb612ca4?q=80&w=2070&auto=format&fit=crop',
+    id: 14,
+    name: 'Waruga Minahasa',
+    sector: 'Kebudayaan',
+    image: '/Images/why sulut/waruga_minahasa.png',
     w: 'w-[260px] md:w-[440px]'
   },
   {
-    id: 14,
-    name: 'Bentang Alam',
-    sector: 'Sulawesi Utara',
-    image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070&auto=format&fit=crop',
+    id: 15,
+    name: 'Arsitektur Rumah Adat Wale',
+    sector: 'Kebudayaan',
+    image: '/Images/why sulut/rumah_adat_wale.png',
     w: 'w-[260px] md:w-[380px]'
   }
 ];
 
-const ProjectCard = ({ project }: { project: typeof topProjects[0] }) => {
+const ProjectCard = ({ project, idx }: { project: typeof topProjects[0], idx: number }) => {
   const [imgSrc, setImgSrc] = React.useState(project.image);
 
   return (
-    <div
+    <motion.div
       className={cn(
-        "flex-none h-[220px] md:h-[250px] relative group transition-all duration-500 hover:-translate-y-2 transform-gpu will-change-transform",
+        "flex-none h-[220px] md:h-[250px] relative group",
         project.w
       )}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: idx * 0.1 }}
+      whileHover={{ scale: 1.05, y: -12, zIndex: 50 }}
     >
       <div className="mr-8 h-full relative text-left">
         <div className="absolute inset-0 z-10 rounded-xl overflow-hidden bg-slate-800 transform-gpu">
@@ -171,7 +183,7 @@ const ProjectCard = ({ project }: { project: typeof topProjects[0] }) => {
         </Link>
       </div>
     </div>
-  </div>
+  </motion.div>
   );
 };
 
@@ -249,19 +261,19 @@ export default function WhySulut() {
       </div>
 
       {/* Top Carousel (LTR Animation) */}
-      <div className="marquee-container flex overflow-hidden py-4">
+      <div className="marquee-container flex overflow-hidden py-8">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...topProjects, ...topProjects].map((project, idx) => (
-            <ProjectCard key={`top-${project.id}-${idx}`} project={project} />
+            <ProjectCard key={`top-${project.id}-${idx}`} project={project} idx={idx} />
           ))}
         </div>
       </div>
 
       {/* Bottom Carousel (RTL Animation) */}
-      <div className="marquee-container flex overflow-hidden py-4">
+      <div className="marquee-container flex overflow-hidden py-8">
         <div className="flex animate-marquee-reverse whitespace-nowrap">
           {[...bottomProjects, ...bottomProjects].map((project, idx) => (
-            <ProjectCard key={`bottom-${project.id}-${idx}`} project={project} />
+            <ProjectCard key={`bottom-${project.id}-${idx}`} project={project} idx={idx} />
           ))}
         </div>
       </div>
