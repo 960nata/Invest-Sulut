@@ -17,7 +17,7 @@ const speeches = [
     name: "Joko Supratikto",
     title: "Kepala Perwakilan Bank Indonesia Sulawesi Utara",
     quote: "Sulawesi Utara menawarkan iklim investasi yang berkelanjutan, inklusif, dan terhubung secara global, didukung oleh infrastruktur strategis and ekonomi yang terbuka.",
-    image: "/Images/Leadrer/portrait_bi.webp"
+    image: "/Images/Leadrer/portrait_bi.avif"
   }
 ];
 
